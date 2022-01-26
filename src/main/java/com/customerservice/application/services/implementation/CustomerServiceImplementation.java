@@ -24,7 +24,7 @@ import com.customerservice.application.utils.DateConverter;
 import com.customerservice.application.utils.NumberGenerator;
 
 /**
- * @author Giddytech
+ * @author Ojo Gideon .O 26th January, 2022
  *
  */
 @Service("customerService")
@@ -32,15 +32,15 @@ public class CustomerServiceImplementation implements CustomerService {
 	
 	private static Logger logger= LoggerFactory.getLogger(CustomerServiceImplementation.class);
 	
-	private CustomerRepository customerRepository;
-	private BillingRepository billingRepository;
+	private final CustomerRepository customerRepository;
+	private final BillingRepository billingRepository;
 	
 	@Autowired
 	DateConverter dateConverter;
 	@Autowired
 	NumberGenerator numberGenerator;
 	
-	private CustomerServiceImplementation(CustomerRepository customerRepository, BillingRepository billingRepository) {
+	public CustomerServiceImplementation(CustomerRepository customerRepository, BillingRepository billingRepository) {
 		this.customerRepository = customerRepository;
 		this.billingRepository = billingRepository;
 	}
@@ -74,7 +74,7 @@ public class CustomerServiceImplementation implements CustomerService {
 			newCustomer.setDateCreated(dateConverter.getCurrentDate());
 			customerRepository.save(newCustomer);
 			Billing newBilling = new Billing();
-			newBilling.setAccountNumber(Long.toString(numberGenerator.generateAccountNumber()).concat("-01"));
+			newBilling.setAccountNumber(numberGenerator.generateAccountNumber().concat("-01"));
 			newBilling.setCustomerID(""+newCustomer.getId());
 			newBilling.setTariff(customerDTO.getCustomerTariff());
 			newBilling.setTariffCurrency(customerDTO.getCurrencyType());

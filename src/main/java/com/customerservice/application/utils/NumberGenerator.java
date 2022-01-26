@@ -1,14 +1,13 @@
 package com.customerservice.application.utils;
 
-import java.util.Random;
-
+import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.stereotype.Component;
 
 @Component
 public class NumberGenerator {
 	
-	public long generateAccountNumber() {
-		Random random = new Random();
-		return random.nextLong();
+	public String generateAccountNumber() {
+		String rand = RandomStringUtils.randomNumeric(10);
+		return rand;
 	}
 }

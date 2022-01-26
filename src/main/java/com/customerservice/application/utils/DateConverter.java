@@ -9,7 +9,7 @@ import java.util.Date;
 import org.springframework.stereotype.Component;
 
 /**
- * @author Giddytech  Date utilities
+ * @author Ojo Gideon .O 26th January, 2022 Date utilities
  *
  */
 @Component

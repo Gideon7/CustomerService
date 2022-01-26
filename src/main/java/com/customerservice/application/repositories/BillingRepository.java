@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.customerservice.application.entities.Billing;
 
 
-@Repository("customerRepository")
+@Repository("billingRepository")
 public interface BillingRepository extends JpaRepository<Billing, Integer>{
 
 	Billing findByCustomerID(String customerID);

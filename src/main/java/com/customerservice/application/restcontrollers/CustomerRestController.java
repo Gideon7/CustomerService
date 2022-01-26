@@ -23,8 +23,8 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 @CrossOrigin(origins = "*")
 @RestController("commentRestController")
-@Tag(name="Comment Endpoints", description="This services shows customer creation processes and retrival")
-@RequestMapping("/customer")
+@Tag(name="Comment Endpoints", description="These services shows customer creation processes and retrival")
+@RequestMapping("/api/v1/customer")
 public class CustomerRestController {
 	private static Logger logger= LoggerFactory.getLogger(CustomerRestController.class);
 	

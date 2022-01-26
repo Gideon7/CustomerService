@@ -15,7 +15,7 @@ import org.hibernate.envers.Audited;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * @author Giddytech
+ * @author Ojo Gideon .O 26th January, 2022
  *
  */
 @Audited

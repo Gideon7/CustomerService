@@ -16,14 +16,10 @@ import io.swagger.v3.oas.models.security.SecurityScheme;
 	     servers = {
 	           
 	            @Server( 
-	 	               url="http://localhost:8080/notch_analytics",
+	 	               url="http://localhost:8080/customer",
 	 	               description="local"
 	 	            ),
 	           
-	            @Server( 
-	               url="https://api.notchcx.io/notch_analytics",
-	               description="Live Server"
-	            )
 	     }
 	)
 public class SwaggerConfiguration {

@@ -53,15 +53,27 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-           <groupId>org.springdoc</groupId>
-           <artifactId>springdoc-openapi-ui</artifactId>
-           <version>1.5.5</version>
-        </dependency>
-         <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-envers -->
-         <dependency>
-             <groupId>org.hibernate</groupId>
-             <artifactId>hibernate-envers</artifactId>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.5.5</version>
          </dependency>
+                <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-envers -->
+                <dependency>
+                    <groupId>org.hibernate</groupId>
+                    <artifactId>hibernate-envers</artifactId>
+                </dependency>
+         <dependency>
+         	<groupId>org.springframework.boot</groupId>
+         	<artifactId>
+         		spring-boot-configuration-processor
+         	</artifactId>
+         	<optional>true</optional>
+         </dependency>
+         <dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		    <version>3.12.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
